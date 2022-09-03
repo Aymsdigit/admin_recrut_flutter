@@ -31,22 +31,183 @@ class _SelectCountryState extends State<SelectCountry> {
             ),
             Expanded(
               child: SizedBox(
-                height: 500,
-                child: GridView.count(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  children: [
-                    Container(
-                        width: 100,
-                        height: 100,
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/civ.png"))))
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GridView.count(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 30,
+                    children: [
+                      Stack(
+                        children: [
+                          Column(
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.pushNamed(context, "Dashboard");
+                                },
+                                child: Container(
+                                    height: 55,
+                                    width: 55,
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                        boxShadow: [
+                                          BoxShadow(
+                                              offset: Offset(2, 2),
+                                              blurRadius: 8,
+                                              color: Colors.grey)
+                                        ],
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(20),
+                                        image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: AssetImage(
+                                                "assets/images/civ.png")))),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("Ivory Coast".toUpperCase())
+                            ],
+                          ),
+                          Positioned(
+                            right: 15,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.red,
+                              radius: 10,
+                              child: Text(
+                                "11",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Stack(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                  height: 55,
+                                  width: 55,
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                            offset: Offset(2, 2),
+                                            blurRadius: 8,
+                                            color: Colors.grey)
+                                      ],
+                                      color: Colors.green,
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: AssetImage(
+                                              "assets/images/togo.png")))),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("togo".toUpperCase())
+                            ],
+                          ),
+                          Positioned(
+                            right: 25,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.red,
+                              radius: 10,
+                              child: Text(
+                                "8",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Stack(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                  height: 55,
+                                  width: 55,
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                            offset: Offset(2, 2),
+                                            blurRadius: 8,
+                                            color: Colors.grey)
+                                      ],
+                                      color: Colors.green,
+                                      borderRadius: BorderRadius.circular(20),
+                                      image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: AssetImage(
+                                              "assets/images/cameroun.png")))),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("cameroun".toUpperCase())
+                            ],
+                          ),
+                          Positioned(
+                            right: 15,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.red,
+                              radius: 10,
+                              child: Text(
+                                "5",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0),
+                        child: Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Container(
+                                    height: 55,
+                                    width: 55,
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                        boxShadow: [
+                                          BoxShadow(
+                                              offset: Offset(2, 2),
+                                              blurRadius: 8,
+                                              color: Colors.grey)
+                                        ],
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(20),
+                                        image: DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: AssetImage(
+                                                "assets/images/nigeria.png")))),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text("Nigeria".toUpperCase())
+                              ],
+                            ),
+                            Positioned(
+                              right: 15,
+                              child: CircleAvatar(
+                                backgroundColor: Colors.red,
+                                radius: 10,
+                                child: Text(
+                                  "2",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             )
