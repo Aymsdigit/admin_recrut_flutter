@@ -12,13 +12,13 @@ class _SelectCountryState extends State<SelectCountry> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 40.0),
+        padding: const EdgeInsets.only(top: 80.0),
         child: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             const Text(
               "Sélectionnez un pays",
-              style: TextStyle(fontSize: 17),
+              style: TextStyle(fontSize: 20),
             ),
             const SizedBox(
               height: 10,
@@ -47,8 +47,8 @@ class _SelectCountryState extends State<SelectCountry> {
                                   Navigator.pushNamed(context, "Dashboard");
                                 },
                                 child: Container(
-                                    height: 55,
-                                    width: 55,
+                                    height: 75,
+                                    width: 75,
                                     padding: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
                                         boxShadow: [
@@ -71,7 +71,7 @@ class _SelectCountryState extends State<SelectCountry> {
                             ],
                           ),
                           Positioned(
-                            right: 15,
+                            right: 50,
                             child: CircleAvatar(
                               backgroundColor: Colors.red,
                               radius: 10,
@@ -88,8 +88,8 @@ class _SelectCountryState extends State<SelectCountry> {
                           Column(
                             children: [
                               Container(
-                                  height: 55,
-                                  width: 55,
+                                  height: 75,
+                                  width: 75,
                                   padding: EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       boxShadow: [
@@ -111,7 +111,7 @@ class _SelectCountryState extends State<SelectCountry> {
                             ],
                           ),
                           Positioned(
-                            right: 25,
+                            right: 65,
                             child: CircleAvatar(
                               backgroundColor: Colors.red,
                               radius: 10,
@@ -128,8 +128,8 @@ class _SelectCountryState extends State<SelectCountry> {
                           Column(
                             children: [
                               Container(
-                                  height: 55,
-                                  width: 55,
+                                  height: 75,
+                                  width: 75,
                                   padding: EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       boxShadow: [
@@ -151,7 +151,7 @@ class _SelectCountryState extends State<SelectCountry> {
                             ],
                           ),
                           Positioned(
-                            right: 15,
+                            right: 70,
                             child: CircleAvatar(
                               backgroundColor: Colors.red,
                               radius: 10,
@@ -170,8 +170,8 @@ class _SelectCountryState extends State<SelectCountry> {
                             Column(
                               children: [
                                 Container(
-                                    height: 55,
-                                    width: 55,
+                                    height: 75,
+                                    width: 75,
                                     padding: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
                                         boxShadow: [
