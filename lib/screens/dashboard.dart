@@ -102,7 +102,7 @@ class _DashboardState extends State<Dashboard> {
                                 children: <Widget>[
                                   Image.asset(
                                     "assets/images/recrutment.png",
-                                    width: 50,
+                                    width: size.width < 350 ? 25 : 50,
                                   ),
                                   SizedBox(
                                     height: 5,
@@ -203,7 +203,7 @@ class _DashboardState extends State<Dashboard> {
                         children: [
                           Image.asset(
                             "assets/images/recrutment.png",
-                            width: 150,
+                            width: size.width < 350 ? 80 : 150,
                           ),
                           Text(
                             "Recruteurs",
@@ -251,7 +251,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/fournisseur.png",
-                          width: 150,
+                          width: size.width < 350 ? 80 : 150,
                         ),
                         Text(
                           "Fournisseurs",
@@ -298,7 +298,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/map.png",
-                          width: 150,
+                          width: size.width < 350 ? 80 : 150,
                         ),
                         Text(
                           "Ambassadeurs",
@@ -345,7 +345,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/live-chat.png",
-                          width: 150,
+                          width: size.width < 350 ? 80 : 150,
                         ),
                         Text(
                           "Messagerie",
@@ -392,7 +392,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Icon(
                           Icons.notifications,
-                          size: 150,
+                          size: size.width < 350 ? 80 : 150,
                           color: Color(0xff63074D),
                         ),
                         Text(
@@ -440,7 +440,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Icon(
                           Icons.credit_card,
-                          size: 150,
+                          size: size.width < 350 ? 80 : 150,
                           color: Color(0xff63074D),
                         ),
                         Text(
