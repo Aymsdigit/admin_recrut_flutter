@@ -1,7 +1,10 @@
 import 'package:fl_third_project/screens/dashboard.dart';
+import 'package:fl_third_project/screens/detailPendingPaiement.dart';
 import 'package:fl_third_project/screens/homePage.dart';
+import 'package:fl_third_project/screens/profilVendeur.dart';
 import 'package:fl_third_project/screens/selectCountry.dart';
 import 'package:fl_third_project/screens/vendeurDashboard.dart';
+import 'package:fl_third_project/screens/vendeurs.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,6 +28,9 @@ class MyApp extends StatelessWidget {
         "SelectCountry": (context) => const SelectCountry(),
         "Dashboard": (context) => const Dashboard(),
         "VendeurDashboard": (context) => const VendeurDashboard(),
+        "Vendeurs": (context) => const Vendeurs(),
+        "ProfilVendeur": (context) => const ProfilVendeur(),
+        "DetailPendingPaiement": (context) => const DetailPendingPaiement(),
       },
     );
   }

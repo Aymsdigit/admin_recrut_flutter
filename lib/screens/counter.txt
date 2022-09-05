@@ -1,0 +1,33 @@
+Row(
+    children: [
+    InkWell(
+        onTap: () {
+        _decrementCount();
+        },
+        child: CircleAvatar(
+        backgroundColor: orange,
+        foregroundColor: Colors.white,
+        radius: 15,
+        child: Icon(Icons.remove),
+        ),
+    ),
+    SizedBox(
+        width: 5,
+    ),
+    Text("$_count"),
+    SizedBox(
+        width: 5,
+    ),
+    InkWell(
+        onTap: () {
+        _incrementCount();
+        },
+        child: CircleAvatar(
+        backgroundColor: orange,
+        foregroundColor: Colors.white,
+        radius: 15,
+        child: Icon(Icons.add),
+        ),
+    ),
+    ],
+),
