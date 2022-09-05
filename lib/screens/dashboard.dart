@@ -138,7 +138,7 @@ class _DashboardState extends State<Dashboard> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text("Recruter des vendeurs"),
+                                              Text("Recruteur des vendeurs"),
                                               Text(
                                                 "9",
                                                 style: TextStyle(
@@ -169,7 +169,8 @@ class _DashboardState extends State<Dashboard> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text("Recruter des fournisseurs"),
+                                              Text(
+                                                  "Recruteur des fournisseurs"),
                                               Text(
                                                 "9",
                                                 style: TextStyle(
