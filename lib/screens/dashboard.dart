@@ -13,6 +13,7 @@ class _DashboardState extends State<Dashboard> {
   RecrutChoice? _recrutChoice;
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -91,7 +92,7 @@ class _DashboardState extends State<Dashboard> {
                         context: context,
                         builder: (BuildContext context) {
                           return Container(
-                            height: 210,
+                            height: 300,
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -101,7 +102,10 @@ class _DashboardState extends State<Dashboard> {
                                 children: <Widget>[
                                   Image.asset(
                                     "assets/images/recrutment.png",
-                                    width: 25,
+                                    width: 50,
+                                  ),
+                                  SizedBox(
+                                    height: 5,
                                   ),
                                   Divider(
                                     height: 2,
@@ -114,26 +118,27 @@ class _DashboardState extends State<Dashboard> {
                                   SizedBox(height: 15),
                                   Column(
                                     children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  blurRadius: 2,
-                                                  color: Colors.grey)
-                                            ],
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                        child: RadioListTile<RecrutChoice>(
-                                          activeColor: Color(0xff63074D),
-                                          value: RecrutChoice.vendeurs,
-                                          groupValue: _recrutChoice,
-                                          title: Row(
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, "VendeurDashboard");
+                                        },
+                                        child: Container(
+                                          padding: EdgeInsets.all(20),
+                                          decoration: BoxDecoration(
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    blurRadius: 2,
+                                                    color: Colors.grey)
+                                              ],
+                                              color: Colors.white,
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                          child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text(
-                                                  "Recruter des ${RecrutChoice.vendeurs.name}"),
+                                              Text("Recruter des vendeurs"),
                                               Text(
                                                 "9",
                                                 style: TextStyle(
@@ -141,35 +146,30 @@ class _DashboardState extends State<Dashboard> {
                                               )
                                             ],
                                           ),
-                                          onChanged: (value) {
-                                            setState(() {
-                                              _recrutChoice = value;
-                                              print(_recrutChoice);
-                                            });
-                                          },
                                         ),
                                       ),
-                                      SizedBox(height: 5),
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  blurRadius: 2,
-                                                  color: Colors.grey)
-                                            ],
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                        child: RadioListTile<RecrutChoice>(
-                                          activeColor: Color(0xff63074D),
-                                          value: RecrutChoice.fournisseurs,
-                                          groupValue: _recrutChoice,
-                                          title: Row(
+                                      SizedBox(height: 10),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, "FournisseurDashboard");
+                                        },
+                                        child: Container(
+                                          padding: EdgeInsets.all(20),
+                                          decoration: BoxDecoration(
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    blurRadius: 2,
+                                                    color: Colors.grey)
+                                              ],
+                                              color: Colors.white,
+                                              borderRadius:
+                                                  BorderRadius.circular(10)),
+                                          child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              Text(
-                                                  "Recruter des ${RecrutChoice.fournisseurs.name}"),
+                                              Text("Recruter des fournisseurs"),
                                               Text(
                                                 "9",
                                                 style: TextStyle(
@@ -177,12 +177,6 @@ class _DashboardState extends State<Dashboard> {
                                               )
                                             ],
                                           ),
-                                          onChanged: (value) {
-                                            setState(() {
-                                              _recrutChoice = value;
-                                              print(_recrutChoice);
-                                            });
-                                          },
                                         ),
                                       ),
                                     ],
@@ -209,7 +203,7 @@ class _DashboardState extends State<Dashboard> {
                         children: [
                           Image.asset(
                             "assets/images/recrutment.png",
-                            width: 80,
+                            width: 150,
                           ),
                           Text(
                             "Recruteurs",
@@ -257,7 +251,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/fournisseur.png",
-                          width: 80,
+                          width: 150,
                         ),
                         Text(
                           "Fournisseurs",
@@ -304,7 +298,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/map.png",
-                          width: 80,
+                          width: 150,
                         ),
                         Text(
                           "Ambassadeurs",
@@ -351,7 +345,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/live-chat.png",
-                          width: 80,
+                          width: 150,
                         ),
                         Text(
                           "Messagerie",
@@ -398,7 +392,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Icon(
                           Icons.notifications,
-                          size: 80,
+                          size: 150,
                           color: Color(0xff63074D),
                         ),
                         Text(
@@ -446,7 +440,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Icon(
                           Icons.credit_card,
-                          size: 80,
+                          size: 150,
                           color: Color(0xff63074D),
                         ),
                         Text(

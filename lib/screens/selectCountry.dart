@@ -151,7 +151,7 @@ class _SelectCountryState extends State<SelectCountry> {
                             ],
                           ),
                           Positioned(
-                            right: 70,
+                            right: 60,
                             child: CircleAvatar(
                               backgroundColor: Colors.red,
                               radius: 10,
@@ -193,7 +193,7 @@ class _SelectCountryState extends State<SelectCountry> {
                               ],
                             ),
                             Positioned(
-                              right: 15,
+                              right: 55,
                               child: CircleAvatar(
                                 backgroundColor: Colors.red,
                                 radius: 10,
