@@ -39,7 +39,9 @@ class _VendeursState extends State<Vendeurs> {
             backgroundColor: Colors.white,
             automaticallyImplyLeading: false,
             primary: true,
-            title: ProfilAppbar(),
+            title: ProfilAppbar(
+              appTitle: 'Les vendeurs',
+            ),
             bottom: PreferredSize(
               preferredSize: const Size.fromHeight(10.0),
               child: Column(
@@ -177,13 +179,23 @@ class _VendeursState extends State<Vendeurs> {
                             TabBarIndexValue = index;
                             if (index == 0) {
                               setState(() {
-                                isLienRompu = false;
-                                isLienActif = true;
+                                isStandard = true;
+                                isCertified = false;
+                                isMix = false;
                               });
-                            } else {
+                            }
+                            if (index == 1) {
                               setState(() {
-                                isLienRompu = true;
-                                isLienActif = false;
+                                isStandard = false;
+                                isCertified = true;
+                                isMix = false;
+                              });
+                            }
+                            if (index == 2) {
+                              setState(() {
+                                isStandard = false;
+                                isCertified = false;
+                                isMix = true;
                               });
                             }
                           });
@@ -530,7 +542,7 @@ class _VendeursState extends State<Vendeurs> {
                                       TextSpan(
                                           text: '59',
                                           style: TextStyle(
-                                              color: blue, fontSize: 15)),
+                                              color: orange, fontSize: 15)),
                                     ])),
                                     profilPicture: users[i].profilImage,
                                     CardColor: Colors.white,

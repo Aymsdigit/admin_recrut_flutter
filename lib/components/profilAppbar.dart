@@ -4,10 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfilAppbar extends StatefulWidget {
-  ProfilAppbar({
-    Key? key,
-  }) : super(key: key);
-
+  ProfilAppbar({Key? key, required this.appTitle}) : super(key: key);
+  String appTitle;
   @override
   State<ProfilAppbar> createState() => _ProfilAppbarState();
 }
@@ -33,8 +31,8 @@ class _ProfilAppbarState extends State<ProfilAppbar> {
                         color: Colors.black,
                       )),
                   Text(
-                    "Les Vendeurs",
-                    style: TextStyle(color: Colors.black),
+                    widget.appTitle,
+                    style: TextStyle(color: Colors.black, fontSize: 12),
                   )
                 ],
               ),

@@ -1,10 +1,14 @@
 import 'package:fl_third_project/screens/dashboard.dart';
 import 'package:fl_third_project/screens/detailPendingPaiement.dart';
 import 'package:fl_third_project/screens/fournisseurDashboard.dart';
+import 'package:fl_third_project/screens/fournisseurs.dart';
 import 'package:fl_third_project/screens/historique.dart';
 import 'package:fl_third_project/screens/homePage.dart';
 import 'package:fl_third_project/screens/levelStatsScreen.dart';
+import 'package:fl_third_project/screens/listProducts.dart';
 import 'package:fl_third_project/screens/listVendeurs.dart';
+import 'package:fl_third_project/screens/productView.dart';
+import 'package:fl_third_project/screens/profilFournisseur.dart';
 import 'package:fl_third_project/screens/profilScreen.dart';
 import 'package:fl_third_project/screens/profilVendeur.dart';
 import 'package:fl_third_project/screens/selectCountry.dart';
@@ -43,6 +47,10 @@ class MyApp extends StatelessWidget {
         "LevelStats": (context) => const LevelStats(),
         "ListVendeurs": (context) => const ListVendeur(),
         "FournisseurDashboard": (context) => const FournisseurDashboard(),
+        "Fournisseurs": (context) => const Fournisseurs(),
+        "ProfilFournisseur": (context) => const ProfilFournisseur(),
+        "ListProducts": (context) => const ListProducts(),
+        "ProductView": (context) => const ProductView(),
       },
     );
   }
