@@ -1,5 +1,6 @@
 import 'package:fl_third_project/screens/dashboard.dart';
 import 'package:fl_third_project/screens/detailPendingPaiement.dart';
+import 'package:fl_third_project/screens/fournisseurDashboard.dart';
 import 'package:fl_third_project/screens/historique.dart';
 import 'package:fl_third_project/screens/homePage.dart';
 import 'package:fl_third_project/screens/levelStatsScreen.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         "Statistiques": (context) => const Statistiques(),
         "LevelStats": (context) => const LevelStats(),
         "ListVendeurs": (context) => const ListVendeur(),
+        "FournisseurDashboard": (context) => const FournisseurDashboard(),
       },
     );
   }

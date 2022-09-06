@@ -114,7 +114,7 @@ class _DashboardState extends State<Dashboard> {
                                     indent: 130,
                                   ),
                                   SizedBox(height: 5),
-                                  const Text('Choisir le type de paiement'),
+                                  const Text('Paiement'),
                                   SizedBox(height: 15),
                                   Column(
                                     children: [
