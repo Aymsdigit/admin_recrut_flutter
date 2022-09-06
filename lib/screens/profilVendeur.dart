@@ -258,7 +258,7 @@ class _ProfilVendeurState extends State<ProfilVendeur> {
                               children: [
                                 RatingBar.builder(
                                   updateOnDrag: true,
-                                  minRating: 1,
+                                  minRating: 0,
                                   itemCount: 7,
                                   itemSize: 18,
                                   itemBuilder: (context, index) => Icon(
@@ -267,50 +267,56 @@ class _ProfilVendeurState extends State<ProfilVendeur> {
                                   ),
                                   onRatingUpdate: (rating) {
                                     this.rating = rating;
+                                    setState(() {
+                                      rating;
+                                    });
                                   },
                                 ),
-                                IconButton(
-                                    tooltip: "Valider les étoiles",
-                                    onPressed: () {
-                                      showDialog(
-                                        context: context,
-                                        builder: (context) => AlertDialog(
-                                          actions: [
-                                            TextButton(
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text("Annuler")),
-                                            TextButton(
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text("Confirmer"))
-                                          ],
-                                          title: Text("Envoyer des étoiles"),
-                                          content: Row(
-                                            children: [
-                                              Icon(
-                                                Icons.star,
-                                                color: Colors.amber,
-                                              ),
-                                              Text(
-                                                "$rating",
-                                                style: TextStyle(
-                                                    color: Colors.amber),
-                                              ),
-                                              Text(rating == 1
-                                                  ? " étoile"
-                                                  : " étoiles")
+                                Visibility(
+                                  visible: rating > 0 ? true : false,
+                                  child: IconButton(
+                                      tooltip: "Valider les étoiles",
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) => AlertDialog(
+                                            actions: [
+                                              TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text("Annuler")),
+                                              TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text("Confirmer"))
                                             ],
+                                            title: Text("Envoyer des étoiles"),
+                                            content: Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.star,
+                                                  color: Colors.amber,
+                                                ),
+                                                Text(
+                                                  "$rating",
+                                                  style: TextStyle(
+                                                      color: Colors.amber),
+                                                ),
+                                                Text(rating == 1
+                                                    ? " étoile"
+                                                    : " étoiles")
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      );
-                                    },
-                                    icon: Icon(
-                                      Icons.check_circle,
-                                      color: Colors.green,
-                                    )),
+                                        );
+                                      },
+                                      icon: Icon(
+                                        Icons.check_circle,
+                                        color: Colors.green,
+                                      )),
+                                ),
                               ],
                             ),
                             Row(

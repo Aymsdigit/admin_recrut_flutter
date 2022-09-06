@@ -17,8 +17,11 @@ class _VendeursState extends State<Vendeurs> {
   int selectedIndex = 0;
   bool isLienActif = true;
   bool isLienRompu = false;
-  bool pendingPaid = false;
-  bool isPaid = true;
+  bool pendingPaid = true;
+  bool isPaid = false;
+  bool isStandard = true;
+  bool isCertified = false;
+  bool isMix = false;
   @override
   Widget build(BuildContext context) {
     final arguments = (ModalRoute.of(context)?.settings.arguments as Map);
@@ -433,8 +436,8 @@ class _VendeursState extends State<Vendeurs> {
                             itemBuilder: (context, i) {
                               return GestureDetector(
                                 onTap: () {
-                                  Navigator.pushNamed(
-                                      context, "RecrutFournisseur");
+                                  Navigator.pushNamed(context, "Historique",
+                                      arguments: {'statut': 'isPaid'});
                                 },
                                 child: PaiementCard(
                                   statut: 'payé',
@@ -456,6 +459,126 @@ class _VendeursState extends State<Vendeurs> {
                       )
                     ],
                   ),
+                ),
+              ),
+            ),
+            Visibility(
+              visible: isStandard && cpteIndex == 1,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 20.0, right: 20.0, top: 10.0, bottom: .0),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: size.height * 0.67,
+                            child: ListView.builder(
+                                itemCount: users.length,
+                                itemBuilder: (context, i) {
+                                  return InkWell(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, "ProfilScreen");
+                                    },
+                                    child: ProfilCard(
+                                      date: users[i].date,
+                                      itemCount: users.length,
+                                      name: users[i].name,
+                                      value: RichText(
+                                          text: TextSpan(children: const [
+                                        TextSpan(
+                                            text: '59',
+                                            style: TextStyle(
+                                                color: blue, fontSize: 15)),
+                                      ])),
+                                      profilPicture: users[i].profilImage,
+                                      CardColor: Colors.white,
+                                    ),
+                                  );
+                                }),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Visibility(
+              visible: isCertified && cpteIndex == 1,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 20.0, right: 20.0, top: 10.0, bottom: .0),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: size.height * 0.67,
+                            child: ListView.builder(
+                                itemCount: users.length,
+                                itemBuilder: (context, i) {
+                                  return ProfilCard(
+                                    date: users[i].date,
+                                    itemCount: users.length,
+                                    name: users[i].name,
+                                    value: RichText(
+                                        text: TextSpan(children: const [
+                                      TextSpan(
+                                          text: '59',
+                                          style: TextStyle(
+                                              color: blue, fontSize: 15)),
+                                    ])),
+                                    profilPicture: users[i].profilImage,
+                                    CardColor: Colors.white,
+                                  );
+                                }),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Visibility(
+              visible: isMix && cpteIndex == 1,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 20.0, right: 20.0, top: 10.0, bottom: .0),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: size.height * 0.67,
+                            child: ListView.builder(
+                                itemCount: users.length,
+                                itemBuilder: (context, i) {
+                                  return ProfilCard(
+                                    date: users[i].date,
+                                    itemCount: users.length,
+                                    name: users[i].name,
+                                    value: RichText(
+                                        text: TextSpan(children: const [
+                                      TextSpan(
+                                          text: '59',
+                                          style: TextStyle(
+                                              color: blue, fontSize: 15)),
+                                    ])),
+                                    profilPicture: users[i].profilImage,
+                                    CardColor: Colors.white,
+                                  );
+                                }),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

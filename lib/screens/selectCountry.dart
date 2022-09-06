@@ -10,9 +10,10 @@ class SelectCountry extends StatefulWidget {
 class _SelectCountryState extends State<SelectCountry> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 80.0),
+        padding: EdgeInsets.only(top: size.width < 350 ? 40 : 80.0),
         child: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
@@ -47,8 +48,8 @@ class _SelectCountryState extends State<SelectCountry> {
                                   Navigator.pushNamed(context, "Dashboard");
                                 },
                                 child: Container(
-                                    height: 75,
-                                    width: 75,
+                                    height: size.width < 350 ? 60 : 75,
+                                    width: size.width < 350 ? 60 : 75,
                                     padding: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
                                         boxShadow: [
@@ -71,7 +72,7 @@ class _SelectCountryState extends State<SelectCountry> {
                             ],
                           ),
                           Positioned(
-                            right: 50,
+                            right: size.width < 350 ? 15 : 50,
                             child: CircleAvatar(
                               backgroundColor: Colors.red,
                               radius: 10,
@@ -88,8 +89,8 @@ class _SelectCountryState extends State<SelectCountry> {
                           Column(
                             children: [
                               Container(
-                                  height: 75,
-                                  width: 75,
+                                  height: size.width < 350 ? 60 : 75,
+                                  width: size.width < 350 ? 60 : 75,
                                   padding: EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       boxShadow: [
@@ -111,7 +112,7 @@ class _SelectCountryState extends State<SelectCountry> {
                             ],
                           ),
                           Positioned(
-                            right: 65,
+                            right: size.width < 350 ? 25 : 65,
                             child: CircleAvatar(
                               backgroundColor: Colors.red,
                               radius: 10,
@@ -128,8 +129,8 @@ class _SelectCountryState extends State<SelectCountry> {
                           Column(
                             children: [
                               Container(
-                                  height: 75,
-                                  width: 75,
+                                  height: size.width < 350 ? 60 : 75,
+                                  width: size.width < 350 ? 60 : 75,
                                   padding: EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       boxShadow: [
@@ -151,7 +152,7 @@ class _SelectCountryState extends State<SelectCountry> {
                             ],
                           ),
                           Positioned(
-                            right: 60,
+                            right: size.width < 350 ? 15 : 60,
                             child: CircleAvatar(
                               backgroundColor: Colors.red,
                               radius: 10,
@@ -170,8 +171,8 @@ class _SelectCountryState extends State<SelectCountry> {
                             Column(
                               children: [
                                 Container(
-                                    height: 75,
-                                    width: 75,
+                                    height: size.width < 350 ? 60 : 75,
+                                    width: size.width < 350 ? 60 : 75,
                                     padding: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
                                         boxShadow: [
@@ -193,7 +194,7 @@ class _SelectCountryState extends State<SelectCountry> {
                               ],
                             ),
                             Positioned(
-                              right: 55,
+                              right: size.width < 350 ? 15 : 55,
                               child: CircleAvatar(
                                 backgroundColor: Colors.red,
                                 radius: 10,

@@ -16,7 +16,7 @@ List<User> users = [
       profilImage: 'assets/profil/2.png',
       date: 'il y a 5 min',
       montant: '1000',
-      moyenPaiemet: 'mtn',
+      moyenPaiemet: 'wave',
       numero: '0142634034',
       numeroWhatsApp: '0585725322'),
   User(

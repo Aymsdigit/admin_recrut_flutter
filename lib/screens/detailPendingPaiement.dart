@@ -144,7 +144,10 @@ class _DetailPendingPaiementState extends State<DetailPendingPaiement> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, "Historique",
+                              arguments: {'statut': 'isPendingPaid'});
+                        },
                         child: Text("Historique",
                             style: TextStyle(color: Colors.black54))),
                     VerticalDivider(
@@ -195,8 +198,20 @@ class _DetailPendingPaiementState extends State<DetailPendingPaiement> {
                                                             10)),
                                                 child: TextFormField(
                                                   enabled: false,
+                                                  textAlignVertical:
+                                                      TextAlignVertical.center,
                                                   decoration: InputDecoration(
                                                       hintText: "13 000",
+                                                      suffixIcon: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(top: 8.5),
+                                                        child: FaIcon(
+                                                          FontAwesomeIcons
+                                                              .thumbsUp,
+                                                          color: blue,
+                                                        ),
+                                                      ),
                                                       contentPadding:
                                                           EdgeInsets.only(
                                                               left: 10),
