@@ -204,7 +204,7 @@ class _DashboardState extends State<Dashboard> {
                         children: [
                           Image.asset(
                             "assets/images/recrutment.png",
-                            width: size.width < 350 ? 80 : 150,
+                            width: size.width < 350 ? 80 : 80,
                           ),
                           Text(
                             "Recruteurs",
@@ -252,7 +252,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/fournisseur.png",
-                          width: size.width < 350 ? 80 : 150,
+                          width: size.width < 350 ? 80 : 80,
                         ),
                         Text(
                           "Fournisseurs",
@@ -299,7 +299,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/map.png",
-                          width: size.width < 350 ? 80 : 150,
+                          width: size.width < 350 ? 80 : 80,
                         ),
                         Text(
                           "Ambassadeurs",
@@ -346,7 +346,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Image.asset(
                           "assets/images/live-chat.png",
-                          width: size.width < 350 ? 80 : 150,
+                          width: size.width < 350 ? 80 : 80,
                         ),
                         Text(
                           "Messagerie",
@@ -393,7 +393,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Icon(
                           Icons.notifications,
-                          size: size.width < 350 ? 80 : 150,
+                          size: size.width < 350 ? 80 : 80,
                           color: Color(0xff63074D),
                         ),
                         Text(
@@ -441,7 +441,7 @@ class _DashboardState extends State<Dashboard> {
                       children: [
                         Icon(
                           Icons.credit_card,
-                          size: size.width < 350 ? 80 : 150,
+                          size: size.width < 350 ? 80 : 80,
                           color: Color(0xff63074D),
                         ),
                         Text(

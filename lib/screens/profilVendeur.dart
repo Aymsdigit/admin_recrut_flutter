@@ -149,7 +149,7 @@ class _ProfilVendeurState extends State<ProfilVendeur> {
                         Text(
                           "Remail Kouadio",
                           style: TextStyle(
-                              fontSize: size.width < 350 ? 15 : 20,
+                              fontSize: size.width < 350 ? 15 : 12,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
@@ -157,7 +157,7 @@ class _ProfilVendeurState extends State<ProfilVendeur> {
                           "Inscrit le 21/10/2021",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: size.width < 350 ? 10 : 15),
+                              fontSize: size.width < 350 ? 10 : 12),
                         )
                       ],
                     )
@@ -189,7 +189,7 @@ class _ProfilVendeurState extends State<ProfilVendeur> {
                               ),
                               Text("Abidjan, yopougon",
                                   style: TextStyle(
-                                      fontSize: size.width < 350 ? 12 : 15)),
+                                      fontSize: size.width < 350 ? 12 : 12)),
                             ],
                           ),
                           Row(
@@ -203,7 +203,7 @@ class _ProfilVendeurState extends State<ProfilVendeur> {
                               ),
                               Text("Abidjan, yopougon",
                                   style: TextStyle(
-                                      fontSize: size.width < 350 ? 12 : 15)),
+                                      fontSize: size.width < 350 ? 12 : 12)),
                             ],
                           ),
                         ],
@@ -222,11 +222,11 @@ class _ProfilVendeurState extends State<ProfilVendeur> {
                                 size: 18,
                               ),
                               SizedBox(
-                                width: size.width < 350 ? 5 : 20,
+                                width: size.width < 350 ? 5 : 12,
                               ),
                               Text("jhondoe@gmail.com",
                                   style: TextStyle(
-                                      fontSize: size.width < 350 ? 12 : 20)),
+                                      fontSize: size.width < 350 ? 12 : 12)),
                             ],
                           ),
                           Row(
@@ -234,12 +234,12 @@ class _ProfilVendeurState extends State<ProfilVendeur> {
                             children: [
                               const FaIcon(FontAwesomeIcons.phone, size: 18),
                               SizedBox(
-                                width: size.width < 350 ? 5 : 20,
+                                width: size.width < 350 ? 5 : 12,
                               ),
                               Text(
                                 "0759028545",
                                 style: TextStyle(
-                                    fontSize: size.width < 350 ? 12 : 20),
+                                    fontSize: size.width < 350 ? 12 : 12),
                               ),
                             ],
                           ),
